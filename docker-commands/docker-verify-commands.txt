@@ -1,0 +1,24 @@
+# verify docker version
+> sudo docker --version   ( Linux / Mac : sudo )
+> docker --version   ( Window  )
+> sudo docker -v
+
+# verify docker info
+> sudo docker info   (details information about docker client / server)
+
+# list / view Containers
+> sudo docker ps -a                -> shows all list of Containers
+> sudo docker container ls -a       -> show all Containers
+
+> sudo docker ps                 -> shows running list of Containers
+> sudo docker container ls       -> show running Containers
+
+
+# list docker images
+sudo docker images
+
+# list docker volume
+sudo docker volume ls
+
+# list docker volume
+sudo docker network ls

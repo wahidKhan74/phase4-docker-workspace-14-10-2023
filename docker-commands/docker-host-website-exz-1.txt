@@ -1,0 +1,24 @@
+# Host a website within ubuntu image based container
+
+# pull ubuntu docker image
+> sudo docker pull ubuntu
+
+# run container from ubuntu docker image
+> sudo docker run --name webserver -p 9000:80 -it ubuntu /bin/bash
+
+# Start container
+> sudo docker container start <container-id>
+> sudo docker container start 6c6f5f1688a8
+
+# ssh / login a container
+> sudo docker exec -it <container-id>/<container-name>  /bin/bash
+> sudo docker exec -it 6c6f5f1688a8  /bin/bash
+
+# after login a container
+  > apt update
+  > apt install apache2 -y
+  > service apache2 status
+  > service apache2 start
+  > apt install git -y
+  > git clone https://github.com/wahidKhan74/circus-website.git 
+  > cp -r circus-website/* /var/www/html/

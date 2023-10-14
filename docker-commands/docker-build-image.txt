@@ -1,0 +1,19 @@
+# Host Java / Spring boot Webservice by creating a docker image.
+
+step 1: create a docker file
+( A Dockerfile is a text document which contains all the commands
+ that a user can call on the command line to assemble an image.)
+> Create a text file labeled Dockerfile.
+
+step 1: build app artifact (.jar)
+> mvn clean package
+
+step 3: docker build image
+> sudo docker build -t <image-name>:<tage-name> -f <Dockerfile / filepath>
+> sudo docker build -t ecom-webservice .
+
+step 4: verify build images
+> sudo docker images
+
+step 5: start / run container from custom docker image
+> sudo docker run --name ecom-webserver -p 8081:8081 -d ecom-webservice

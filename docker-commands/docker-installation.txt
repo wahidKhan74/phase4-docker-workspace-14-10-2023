@@ -1,0 +1,28 @@
+# docker install ubuntu 20.04 
+Linux : https://docs.docker.com/desktop/install/ubuntu/
+
+> sudo apt-get update
+> sudo apt-get install ca-certificates curl gnupg lsb-release -y
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+> echo  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+> sudo apt-get update
+> sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+
+Windows : https://docs.docker.com/desktop/windows/install/
+
+> Double-click Docker Desktop Installer.exe to run the installer.
+> When prompted, ensure the Use WSL 2 instead of Hyper-V option on the Configuration page is selected or not depending on your choice of backend.
+> If your system only supports one of the two options, you will not be able to select which backend to use.
+> Follow the instructions on the installation wizard to authorize the installer and proceed with the install.
+> When the installation is successful, select Close to complete the installation process.
+>If your admin account is different to your user account, you must add the user to the docker-users group. Run Computer Management as an administrator and navigate to Local Users and Groups > Groups > docker-users. Right-click to add the user to the group. Sign out and sign back in for the changes to take effect.
+
+Mac OS : https://docs.docker.com/desktop/install/mac-install/
+> Double-click Docker.dmg to open the installer, then drag the Docker icon to the Applications folder.
+> Double-click Docker.app in the Applications folder to start Docker.
+> The Docker menu ( whale menu ) displays the Docker Subscription Service Agreement.
+> Note that Docker Desktop won't run if you do not agree to the terms. You can choose to accept the terms at a later date by opening Docker Desktop.
+>Use recommended settings (Requires password). This let's Docker Desktop automatically set the necessary configuration settings.
+Use advanced settings. You can then set the location of the Docker CLI tools either in the system or user directory, enable the default Docker socket, and enable privileged port mapping. See Settings, for more information and how to set the location of the Docker CLI tools.
+> Select Finish. If you have applied any of the above configurations that require a password in step 5, enter your password to confirm your choice.

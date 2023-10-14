@@ -1,0 +1,17 @@
+# Pull docker images ( Docker hub register : Prefer official )
+> sudo docker pull ubuntu
+> sudo docker pull openjdk
+> sudo docker pull mongo
+> sudo docker pull mysql
+
+# Run docker comtainer 
+> sudo docker run -it ubuntu /bin/bash
+
+# Start container
+> sudo docker container start <container-id>
+> sudo docker container start e799cac0fd62
+
+# ssh / login a container
+> sudo docker exec -it <container-id>/<container-name>  /bin/bash
+> sudo docker exec -it e799cac0fd62  /bin/bash
+

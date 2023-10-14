@@ -1,0 +1,25 @@
+# create / run a container
+> sudo docker run -it ubuntu /bin/bash
+
+# ssh / login a container
+> sudo docker exec -it /bin/bash sudo docker exec -it ubuntu /bin/bash
+
+# start container
+> sudo docker container start <container-id>/<container-name>
+> sudo docker container start 6c6f5f1688a8
+
+# stop container
+> sudo docker container stop <container-id>/<container-name>
+> sudo docker container stop 6c6f5f1688a8
+
+# restart container
+> sudo docker container restart <container-id>/<container-name>
+> sudo docker container restart 6c6f5f1688a8
+
+# delete container (stop container)
+> sudo docker container rm <container-id>/<container-name>
+> sudo docker container rm 6c6f5f1688a8
+
+# delete a running container 
+> sudo docker container rm -f <container-id>/<container-name>
+> sudo docker container rm -f 6c6f5f1688a8
