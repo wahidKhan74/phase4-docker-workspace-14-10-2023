@@ -1,0 +1,19 @@
+# Initialize a docker swarm cluster 
+> sudo docker swarm init   (It initialize docker swarm cluster and create a manager node. )
+
+# Verify nodes in cluster
+> sudo docker node ls
+
+# list docker swarm service
+> sudo docker service ls
+
+
+# create a service ( docker service will manage your container)
+> sudo docker service create -p 9000:80 --name php-webapp-service  wahid74/php-webservice:v1.0.0
+
+# Scaling up docker container on docker swarm
+> sudo docker service scale php-webapp-service=4
+
+
+# Scaling down docker container on docker swarm
+> sudo docker service scale php-webapp-service=2

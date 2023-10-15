@@ -17,3 +17,6 @@ step 4: verify build images
 
 step 5: start / run container from custom docker image
 > sudo docker run --name ecom-webserver -p 8081:8081 -d ecom-webservice
+
+# Running container by image:tags
+> sudo docker run --name ecom-webserver -p 8081:8081 -d wahid74/ecom-webservice:v2.0.0

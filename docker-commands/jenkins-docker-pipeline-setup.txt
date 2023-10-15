@@ -1,0 +1,18 @@
+# Jenkins Docker Pipline
+
+step 1: create a project repository (Github)
+
+step 2: Create a Dcokerfile  (To create a docker image)
+
+step 3 : Create a Jenkinsfile (To create a pipeline)
+
+step 4: Create a jenkins new project as a pipeline project
+
+step 5: choose pipeline from SCM and select the Jenkinsfile
+
+step 6: build jenkins pipeline
+
+sample project
+
+https://github.com/wahidKhan74/ecom-webservice
+

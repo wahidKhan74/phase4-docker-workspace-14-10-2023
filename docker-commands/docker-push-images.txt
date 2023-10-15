@@ -1,0 +1,43 @@
+# Push PHP code Image
+
+Step1 : Create a docker images
+> sudo docker build -t php-webservice .
+
+Step2 : Create a docker images tags (Tags are used for release management)
+> sudo docker tag <source-image-name>  <image-name>:<tag-name> 
+> sudo docker tag php-webservice wahid74/php-webservice:v1.0.0
+> sudo docker tag php-webservice wahid74/php-webservice:v1.0.1
+> sudo docker tag php-webservice wahid74/php-webservice:v2.0.0
+
+Step3 : login into dockerhub registry
+> sudo docker login
+  > username :
+  > password :
+
+Step4: push tag to docker hub.
+> sudo docker push <username>/<image-name>:<tag-name> 
+> sudo docker push wahid74/php-webservice:v1.0.0
+> sudo docker push wahid74/php-webservice:v1.0.1
+> sudo docker push wahid74/php-webservice:v2.0.0
+
+-------------------------------------------------------------
+
+# Push Java / Spring boot Webservice code Image
+
+Step1 : Create a docker images
+> sudo docker build -t ecom-webservice .
+
+Step2 : Create a docker images tags (Tags are used for release management)
+> sudo docker tag <source-image-name>  <image-name>:<tag-name> 
+> sudo docker tag ecom-webservice wahid74/ecom-webservice:v1.0.0
+
+Step3 : login into dockerhub registry
+> sudo docker login
+  > username :
+  > password :
+
+Step4: push tag to docker hub.
+> sudo docker push <username>/<image-name>:<tag-name> 
+> sudo docker push wahid74/ecom-webservice:v1.0.0
+> sudo docker push wahid74/ecom-webservice:v1.0.1
+> sudo docker push wahid74/ecom-webservice:v2.0.0
