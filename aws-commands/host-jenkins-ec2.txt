@@ -1,0 +1,27 @@
+1. Creat a c2 Instance
+2. Connect Ec2 Instance
+   -> Open an SSH client.
+   -> Locate your private key file. The key used to launch this instance is server-key-ohio.pem
+   -> Run this command, if necessary, to ensure your key is not publicly viewable.
+      chmod 400 server-key-ohio.pem
+   -> Connect to your instance using its Public DNS:
+      ssh -i "server-key-ohio.pem" ubuntu@XXXXXXXX.compute.amazonaws.com
+3. Install Jenkins Server
+   -> sudo  apt install default-jdk -y
+   -> sudo apt install maven -y 
+
+4. Install Jenkins Server
+   -> sudo apt update 
+   -> sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+   -> echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   -> sudo apt-get update
+   -> sudo apt-get install jenkins  -y
+
+5. Uninstall Jenkins / purge
+   -> sudo apt purge jenkins  -y
+
+6. Check Jenkin service status
+   -> sudo service jenkins status
+   -> sudo service jenkins stop
+   -> sudo service jenkins start
+   -> sudo service jenkins restart

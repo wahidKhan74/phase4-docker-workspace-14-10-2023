@@ -1,0 +1,21 @@
+1. Creat a c2 Instance
+2. Connect Ec2 Instance
+   -> Open an SSH client.
+   -> Locate your private key file. The key used to launch this instance is server-key-ohio.pem
+   -> Run this command, if necessary, to ensure your key is not publicly viewable.
+      chmod 400 server-key-ohio.pem
+   -> Connect to your instance using its Public DNS:
+      ssh -i "server-key-ohio.pem" ubuntu@XXXXXXXX.compute.amazonaws.com
+
+3. Install webserver  (Apache2)
+   -> sudo apt update 
+   -> sudo apt install apache2 -y
+
+4. Install git 
+   -> sudo apt install git -y
+   -> git clone <repository-url>
+   -> git clone https://github.com/wahidKhan74/circus-website.git
+
+5. Deploy
+   -> sudo cp -r circus-website/*  /var/www/html/
+   
