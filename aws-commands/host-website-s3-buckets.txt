@@ -1,0 +1,13 @@
+# Host static webstie with s3.
+
+1. Create a s3 bucket 
+   -> domain as your buckets
+   -> ex :  (www.circus.com)
+
+2. Upload website document in s3 bucket
+
+3. Allow Public Access to puckect
+   -> Open public access for bucket
+   -> Create Read Public Acces Policy for all user.
+
+4. Change Static Hosting property in S3 to get DNS 

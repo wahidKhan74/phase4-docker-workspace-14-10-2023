@@ -1,0 +1,45 @@
+# Deploy Spring Boot MySQL Application to Docker
+
+1. Deploy MySQL Image in a Container
+---------------------------------------
+
+Step1: Pull MySQL Image
+> sudo docker pull mysql
+
+Step 2: Create a docker network to communicate Spring boot application and MySQL database
+> sudo docker network create ecom-webapp-network
+> sudo docker network ls
+
+Step 3: Run MySQL image in a docker container in the same network (ecom-webapp-network)
+> sudo docker run --name mysqldb --network ecom-webapp-network -e MYSQL_ROOT_PASSWORD=root  -e MYSQL_DATABASE=ecomorg_db -d mysql
+
+Step 4: Access the MySQL database in a container
+> sudo docker exec -it mysqldb bash
+
+Step 4: Login into MySQL database from a container
+> # mysql -u root -p
+
+mysql> show databases;
+
+
+Step 3 (Optaional Step for Access MYSQL Server from outsite): 
+       Run MySQL image in a docker container in the same network (ecom-webapp-network)  expose ports
+> sudo docker run --name mysqldb -p 3306:3306 --network ecom-webapp-network -e MYSQL_ROOT_PASSWORD=root  -e MYSQL_DATABASE=ecomorg_db -d mysql
+
+
+2. Run Jenkins Pipeline and Deploy Spring Boot Application in a Docker Container
+--------------------------------------------------------------------------------
+Step1: Create a Github Repository
+> push source code into the repository
+
+Step2: Create a Jenkins file in root level directory
+> push Jenkins file into the repository
+
+Step3: Create a Docker file in root level directory
+> push Docker file into the repository
+
+Step4: Chnage of dokcer based mysqldb config in spring application properties
+> # spring.datasource.url = jdbc:mysql://mysqldb:3306/ecomorg_db
+> push chnages into the repository
+
+Step5: Create / Configure a jenkins pipeline project
